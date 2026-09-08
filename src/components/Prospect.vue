@@ -4,7 +4,7 @@
         <q-form @submit="onSubmit" class="q-gutter-md">
             <q-input
                 filled
-                v-model="prospect.name"
+                v-model="form.name"
                 label="Nombre del Prospecto*"
                 :rules = "[ 
                     val => (val && val.length > 0) || 'El nombre es requerido'
@@ -13,7 +13,7 @@
 
             <q-input
                 filled
-                v-model="from.phone"
+                v-model="form.phone"
                 label="Telefono *"
                 :rules = "[ 
                     val => (val && val.length > 0) || 'El telefono es requerido',
@@ -35,7 +35,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 import { useQuasar } from 'quasar'
 
 // Intancia del plugin de Quasar

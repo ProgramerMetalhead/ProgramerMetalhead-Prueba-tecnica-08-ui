@@ -5,10 +5,11 @@
       <h4 class="text-h4">Registro de Prospectos</h4>
       <p class="text-subtitle1">Ingresa los datos del nuevo cliente</p>
     </div>
-      
+      <!-- Inyecion del componente -->
+      <prospect></prospect>
   </q-page>
 </template>
 
 <script setup>
-
+import Prospect from '@/components/Prospect.vue';
 </script>
